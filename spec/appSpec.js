@@ -33,4 +33,9 @@ describe("A suite of test for the demo function of the main class", function() {
 
     });
 
+    it("return Hello, Kratos and Thanathos. when given Kratos, Thanathos", function(){
+        const result = main.greet(["Kratos", "Thanathos"]);
+        expect(result).toBe("Hello, Kratos and Thanathos.");
+    });
+
 });
