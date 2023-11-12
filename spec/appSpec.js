@@ -50,5 +50,9 @@ describe("A suite of test for the demo function of the main class", function() {
         expect(result).toBe("Hello, Kratos, Thanathos and Hypnos.");
     });
 
+    it("return Hello, Thanathos and Hypnos. AND HELLO KRATOS! when given KRATOS, Thanathos, Hypnos", function(){
+        const result = main.greet(["KRATOS", "Thanathos", "Hypnos"]);
 
+        expect(result).toBe("Hello, Thanathos and Hypnos. AND HELLO KRATOS!");
+    });
 });
