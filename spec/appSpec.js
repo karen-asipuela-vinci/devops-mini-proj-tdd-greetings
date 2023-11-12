@@ -27,4 +27,10 @@ describe("A suite of test for the demo function of the main class", function() {
 
     });
 
+    it("return HELLO, KENOBI! when given KENOBI ", function() {
+        const result = main.greet("KENOBI");
+        expect(result).toBe("HELLO, KENOBI!");
+
+    });
+
 });
