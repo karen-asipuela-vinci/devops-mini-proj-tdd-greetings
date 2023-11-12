@@ -15,4 +15,12 @@ describe("A suite of test for the demo function of the main class", function() {
 
     });
 
+    it("return Hello, my friend when given undefined ", function() {
+        const result = main.greet(undefined);
+        expect(result).toBe("Hello, my friend.");
+
+    });
+
+   
+
 });
