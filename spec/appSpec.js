@@ -1,4 +1,4 @@
-import { Main } from '../src/helloWord.js';
+import { Main } from '../src/helloWordSpec.js';
 
 describe("A suite of test for the demo function of the main class", function() {
     let main = new Main();
