@@ -21,6 +21,10 @@ describe("A suite of test for the demo function of the main class", function() {
 
     });
 
-   
+    it("return Hello, my friend when given empty name ", function() {
+        const result = main.greet(" ");
+        expect(result).toBe("Hello, my friend.");
+
+    });
 
 });
