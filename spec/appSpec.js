@@ -57,8 +57,8 @@ describe("A suite of test for the demo function of the main class", function() {
     });
 
     it("return Bonjour Kratos et Thanatos. when given Kratos, thanathos, fr", function(){
-        const result = main.greet(["Kratos", "Thanathos", "fr"]);
+        const result = main.greet(["kratos" , "Thanathos", "fr"]);
 
-        expect(result).toBe("Bonjour, Kratos et Thanathos.");
+        expect(result).toBe("Bonjour, kratos et Thanathos.");
     });
 });
