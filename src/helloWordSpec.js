@@ -17,52 +17,68 @@ export class Main {
                     lowerCase.push(element);
                  }
             });
-           
-            let printLower
-            if( langue != null){
-                if(langue == "fr"){
-                 printLower = "Bonjour, " + lowerCase[0];
-                }
-                else if(langue =="nl"){
-                 printLower = "Goeiedag, " + lowerCase[0];
-                }}
-            else { printLower = "Hello, " + lowerCase[0];}
 
+            let printLower
+            if(lowerCase.length === 0){printLower = "" }
+            else { 
+                if( langue != null){
+                    if(langue == "fr"){
+                    printLower = "Bonjour, " + lowerCase[0];
+                    }
+                    else if(langue =="nl"){
+                    printLower = "Goeiedag, " + lowerCase[0];
+                    }}
+                else { printLower = "Hello, " + lowerCase[0];}
+            }
+
+            if(lowerCase.length > 1){
             const notLast = lowerCase.slice(1,-1);
             const last = lowerCase.slice(-1);
             notLast.forEach(element => {
                 printLower += ", " + element;
             });
+            if( langue != null){
+                if(langue == "fr"){
+                    printLower = printLower +" et "+ last + ".";
+                    }
+                    else if(langue == "nl"){
+                        printLower = printLower +" en "+ last + ".";
+                    }}
+                else { printLower = printLower +" and "+ last + ".";}
+
+        }
+
+
             if(upperCase.length===0){
                 if( langue != null){
                     if(langue == "fr"){
-                        return printLower +" et "+ last + ".";
+                        return printLower;
                         }
                         else if(langue == "nl"){
-                         return printLower +" en "+ last + ".";
+                         return printLower;
                         }}
-                    else {return printLower +" and "+ last + ".";}
+                    else {return printLower;}
 
                 
             }
             if(upperCase.length===1){
                 if( langue != null){
                     if(langue == "fr"){
-                        return printLower += " et " + last + ". ET BONJOUR " + upperCase[0] + "!"; 
+                        return printLower +" ET BONJOUR " + upperCase[0] + "!"; 
                         }
                         else if(langue == "nl"){
-                            return printLower += " en " + last + ". EN GOEIENDAG " + upperCase[0] + "!"; 
+                            return printLower +" EN GOEIENDAG " + upperCase[0] + "!"; 
                         }}
-                    else {return printLower += " and " + last + ". AND HELLO " + upperCase[0] + "!"; }
+                    else {return printLower + " AND HELLO " + upperCase[0] + "!"; }
                
             }
             let printUpper
             if( langue != null){
                 if(langue == "fr"){
-                     printupper = "ET BONJOUR, " + upperCase[0];
+                     printupper = " ET BONJOUR, " + upperCase[0];
                     }
                     else if(langue == "nl"){
-                     printupper = "EN GOEIENDAG, " + upperCase[0];
+                     printupper = " EN GOEIENDAG, " + upperCase[0];
                     }}
                 else { printUpper = " AND HELLO " + upperCase[0];}
             const notLastU = upperCase.slice(1,-1);
@@ -72,12 +88,12 @@ export class Main {
             });
             if( langue != null){
                 if(langue == "fr"){
-                    return printLower += " et " + last + ". ET BONJOUR " + printUpper +" ET" + lastU + "!"; 
+                    return printLower  + printUpper +" ET" + lastU + "!"; 
                     }
                     else if(langue == "nl"){
-                        return printLower += " en " + last + ". EN GOEIENDAG " + printUpper +" EN" + lastU + "!";  
+                        return printLower + printUpper +" EN" + lastU + "!";  
                     }}
-                else {return printLower += " and " + last + "." + printUpper +" AND HELLO " + lastU + "!";  }
+                else {return printLower + printUpper +" AND " + lastU + "!";  }
             
             }
        };
