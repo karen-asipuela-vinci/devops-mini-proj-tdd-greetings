@@ -45,8 +45,7 @@ export class Main {
                         printLower = printLower +" en "+ last + ".";
                     }}
                 else { printLower = printLower +" and "+ last + ".";}
-
-        }
+        }else{printLower += "."}
 
 
             if(upperCase.length===0){
