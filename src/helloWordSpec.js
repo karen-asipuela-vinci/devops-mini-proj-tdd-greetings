@@ -1,6 +1,8 @@
 export class Main {
   greet (name) {
-    if (name === null || name === undefined || name === ' ') { return 'Hello, my friend.'; }
+    if (name === null || name === undefined || name === ' ') {
+      return 'Hello, my friend.';
+    }
     if (Array.isArray(name)) {
       if (name.length > 1) {
         const upperCase = [];

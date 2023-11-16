@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "first project in devops",
     "scripts": {
-        "prettier": "prettier --check .",
+        "prettier": "prettier --check . --config prettier.config.cjs",
         "prettier:fix": "prettier --write .",
         "test": "jasmine",
         "lint": "eslint . --config .eslintrc.cjs",
