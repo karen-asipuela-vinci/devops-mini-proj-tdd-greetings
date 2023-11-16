@@ -2,7 +2,6 @@
     "name": "tdd-ipl",
     "version": "1.0.0",
     "description": "first project in devops",
-    "type": "module",
     "scripts": {
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
