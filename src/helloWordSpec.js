@@ -3,6 +3,8 @@ export class Main {
     if (name === null || name === undefined || name === ' ') {
       return 'Hello, my friend.';
     }
+
+    // creation of list of the lowercase and uppercase names and put names in the rigth list
     if (Array.isArray(name)) {
       if (name.length > 1) {
         const upperCase = [];
@@ -21,10 +23,12 @@ export class Main {
             lowerCase.push(element);
           }
         });
-
+        // case where there is no lowercase name
         let printLower;
         if (lowerCase.length === 0) {
           printLower = '';
+
+          // creation of begin of phrase for each language
         } else {
           if (langue != null) {
             if (langue === 'fr') {
@@ -40,6 +44,8 @@ export class Main {
         if (lowerCase.length > 1) {
           const notLast = lowerCase.slice(1, -1);
           const last = lowerCase.slice(-1);
+
+          // adding all lowercase names to the sentence
           notLast.forEach((element) => {
             printLower += ', ' + element;
           });
@@ -55,7 +61,7 @@ export class Main {
         } else {
           printLower += '.';
         }
-
+        // case where there is no uppercase names
         if (upperCase.length === 0) {
           if (langue != null) {
             if (langue === 'fr') {
@@ -67,6 +73,7 @@ export class Main {
             return printLower;
           }
         }
+        // case where there is only one uppercase word and adding it too the sentence
         if (upperCase.length === 1) {
           if (langue != null) {
             if (langue === 'fr') {
@@ -95,6 +102,7 @@ export class Main {
         } else {
           printUpper = ' AND HELLO ' + upperCase[0];
         }
+        // adding all uppercase names to the sentence
         const notLastU = upperCase.slice(1, -1);
         const lastU = upperCase.slice(-1);
         notLastU.forEach((element) => {
@@ -111,6 +119,7 @@ export class Main {
         }
       }
     }
+    // case with only one uppercase word
     if (name === name.toUpperCase()) return 'HELLO, ' + name + '!';
     return 'Hello, ' + name + '.';
   }
