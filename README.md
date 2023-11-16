@@ -42,6 +42,7 @@ yarn start
 
 Contributors names and contact info
 
+Groupe 15: 
 Bui Tuan Bao
 De Jamblinne Gilles
 Asipuela Karen

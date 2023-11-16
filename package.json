@@ -1,13 +1,13 @@
 {
     "name": "tdd-ipl",
     "version": "1.0.0",
-    "description": "",
+    "description": "first project in devops",
     "scripts": {
         "prettier": "prettier --check .",
         "prettier:fix": "prettier --write .",
         "test": "jasmine"
     },
-    "author": "",
+    "author": "group 15",
     "type": "module",
     "license": "ISC",
     "devDependencies": {
