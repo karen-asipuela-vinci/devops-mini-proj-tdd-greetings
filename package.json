@@ -1,15 +1,16 @@
 {
-  "name": "tdd-ipl",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "jasmine"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jasmine": "^5.1.0"
-  }
+    "name": "tdd-ipl",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "prettier": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "test": "jasmine"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jasmine": "^5.1.0",
+        "prettier": "3.1.0"
+    }
 }
