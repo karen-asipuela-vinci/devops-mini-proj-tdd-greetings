@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
+
 import { Main } from '../src/helloWordSpec.js'
 
-describe('A suite of test for the demo function of the main class', function () {
+ describe('A suite of test for the demo function of the main class', function () {
     let main = new Main()
 
     it('return Hello, {name}. when given name ', function () {
@@ -12,7 +14,7 @@ describe('A suite of test for the demo function of the main class', function () 
     it('return Hello, my friend when given null ', function () {
         const result = main.greet(null)
 
-        expect(result).toBe('Hello, my friend.')
+          expect(result).toBe('Hello, my friend.')
     })
 
     it('return Hello, my friend when given undefined ', function () {

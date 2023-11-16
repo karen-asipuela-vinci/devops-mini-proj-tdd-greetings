@@ -83,12 +83,12 @@ export class Main {
                         return printLower + ' AND HELLO ' + upperCase[0] + '!'
                     }
                 }
-                let printUpper
+                let printUpper 
                 if (langue != null) {
                     if (langue == 'fr') {
-                        printupper = ' ET BONJOUR, ' + upperCase[0]
+                        printUpper = ' ET BONJOUR, ' + upperCase[0]
                     } else if (langue == 'nl') {
-                        printupper = ' EN GOEIENDAG, ' + upperCase[0]
+                        printUpper = ' EN GOEIENDAG, ' + upperCase[0]
                     }
                 } else {
                     printUpper = ' AND HELLO ' + upperCase[0]
