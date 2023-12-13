@@ -6,6 +6,12 @@ module.exports = {
     },
     testEnvironment: 'node', // Pour exécuter les tests dans un environnement Node.js
     testMatch: ['**/__tests__/**/*.test.cjs'], // Les fichiers de test doivent correspondre à ce modèle
-    collectCoverageFrom: ['./src/**']
+    collectCoverage: true,
+    collectCoverageFrom: ['./src/**'],
+    coverageThreshold: {
+        "global": {
+            "lines": 80
+        }
+    }
   };
   
