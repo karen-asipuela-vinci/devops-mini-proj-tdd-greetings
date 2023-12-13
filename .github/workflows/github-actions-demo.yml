@@ -9,11 +9,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-
     - name : instal dependency
       run: npm i
 
-    - name : display Start time
+    - name : Show Start time
       run: echo "Pipeline started at $(date)"
 
     - name : run lint and prittier to fix the code  
@@ -22,13 +21,13 @@ jobs:
     - name : test the code with jest
       run: npm run test
 
-    - name: build the code
-      run : npm run build
+    - name: Generate
+      uses: skx/github-action-build@master
+      with:
+        builder: .github/build
 
-
-
-    - name: Display End Time
+    - name: Show End Time
       run: echo "Pipeline ended at $(date)"
 
-    - name: Display Success Message
+    - name: Show Success Message
       run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
