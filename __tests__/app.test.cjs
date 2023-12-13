@@ -58,4 +58,9 @@ describe('A suite of test for the demo function of theapp class', () => {
     const result =app.greet(['Kratos', 'THANATHOS', 'fr']);
     expect(result).toBe('Bonjour, Kratos. ET BONJOUR THANATHOS!');
   });
+
+  it('return Goeiedag, Kratos en Thanatos when given name and language is nl', () => {
+    const result = app.greet(['Kratos','Thanatos', 'nl']);
+    expect(result).toBe('Goeiedag, Kratos en Thanatos');
+  });
 });
