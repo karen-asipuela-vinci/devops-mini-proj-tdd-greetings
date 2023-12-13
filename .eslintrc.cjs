@@ -1,15 +1,30 @@
 module.exports = {
-    extends: ['standard'],
     env: {
-        browser: true,
+        /* node , not browser */
+        node: true,
+        // commonjs ... modules.exports use
+        commonjs: true,
         es2021: true,
+        jest: true,
     },
-    overrides: [],
+    /* rules present in eslint : recommended
+     https://eslint.org/docs/latest/rules
+    */
+
+    extends: "eslint:recommended",
+    overrides: [
+        {
+            env: {
+                node: true,
+            },
+            files: [".eslintrc.{js,cjs}"],
+            parserOptions: {
+                sourceType: "script",
+            },
+        },
+    ],
     parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
     },
-    rules: {
-        semi: ['error', 'always'],
-    },
-}
+    rules: {},
+};
