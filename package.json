@@ -1,15 +1,24 @@
 {
   "name": "tdd-ipl",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
+  "description": "first project in devops",
   "scripts": {
-    "test": "jasmine"
+      "prettier": "prettier --check . --config prettier.config.cjs",
+      "prettier:fix": "prettier --write .",
+      "test": "jasmine",
+      "lint": "eslint . --config .eslintrc.cjs",
+      "lint:fix": "eslint --fix .",
+      "code:fix": "prettier --write . && eslint --fix ."
   },
-  "author": "",
+  "type": "module",
+  "author": "group 15",
   "license": "ISC",
   "devDependencies": {
-    "jasmine": "^5.1.0"
+      "eslint": "^8.53.0",
+      "eslint-config-standard": "^17.1.0",
+      "eslint-plugin-react": "^7.33.2",
+      "eslint-plugin-standard": "^5.0.0",
+      "jasmine": "^5.1.0",
+      "prettier": "3.1.0"
   }
 }
