@@ -6,9 +6,9 @@ Placeholder project using material ui as styling library.
 
 ### Prerequisites
 
-- [Node JS / NPM](https://nodejs.org/en/)
-- [Yarn (optional)](https://yarnpkg.com/)
-- [Material](https://material-components.github.io/material-components-web-catalog/#/)
+-   [Node JS / NPM](https://nodejs.org/en/)
+-   [Yarn (optional)](https://yarnpkg.com/)
+-   [Material](https://material-components.github.io/material-components-web-catalog/#/)
 
 ### Installing
 
@@ -42,8 +42,9 @@ yarn start
 
 Contributors names and contact info
 
-Bui Tuan Bao
-De Jamblinne Gilles
-Asipuela Karen
+Groupe 15:
+Bui Tuan Bao,
+De Jamblinne Gilles,
+Asipuela Karen,
 
-- Dls
+-   Dls
