@@ -17,6 +17,7 @@ export class Main {
                     lowerCase.push(element);
                  }
             });
+           
             let printLower
             if( langue != null){
                 if(langue == "fr"){
@@ -76,7 +77,7 @@ export class Main {
                     else if(langue == "nl"){
                         return printLower += " en " + last + ". EN GOEIENDAG " + printUpper +" EN" + lastU + "!";  
                     }}
-                else {return printLower += " and " + last + "." + printUpper +" AND" + lastU + "!";  }
+                else {return printLower += " and " + last + "." + printUpper +" AND HELLO " + lastU + "!";  }
             
             }
        };
