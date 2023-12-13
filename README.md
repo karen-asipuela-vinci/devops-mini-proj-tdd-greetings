@@ -51,30 +51,39 @@ Asipuela Karen,
 
 ## Questions
 
-- Décrivez brièvement ce que fait votre fichier YML.  
+- Décrivez brièvement ce que fait votre fichier YML.
 ```bash
-Il installe les dépendances puis il lance plusieurs vérifications du code à la suite, test le code et finalement, le build.
+Il installe les dépendances, puis il lance plusieurs vérifications du code à la suite, formate le code pour le rendre conforme aux normes et le plus lisible possible, teste le code, et enfin, effectue le build.
 Si tout est vérifié, il renvoie 'la pipeline a réussi'.
 ```
-- En particulier : à quoi sert le “on” ? dans votre fichier YML ?  Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
-```bash
-Le 'on' sert de marqueur pour lancer la pipeline a différents endroits du code.
-Leur différence se trouve au niveau du lancement : 'on push' se lance lors d'un push alors que 'on pull request' se lance lorsqu'on lance une request.
-On conseillerait l'utilisation d'un 'on push' pour faire des vérifications plus frequemment qu'avec un 'on request'. Cela permettra de vérifier le code sur des sections "plus petites" et faciliter la détection d'erreurs.
-```
-- Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
-```bash
-////////////////////
-```
-- Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
-```bash
 
-```
-- Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
+- En particulier : à quoi sert le “on” dans votre fichier YML ? Quelle est la différence entre “on push” et “on pull request” . Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
 ```bash
-<votre réponse ici>
+Le 'on' sert de marqueur pour lancer la pipeline à différents endroits du code.
+Leur différence se trouve au niveau du déclenchement : 'on push' se lance lors d'un push, tandis que 'on pull request' se lance lorsqu'on soumet une demande de fusion.
+On conseillerait l'utilisation d'un 'on push' pour effectuer des vérifications plus fréquemment qu'avec un 'on pull request'. Cela permettra de vérifier le code sur des sections "plus petites" et facilitera la détection d'erreurs.
 ```
-- Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ?  Quelles questions devriez-vous vous poser ? 
+
+- Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
 ```bash
-<votre réponse ici>
+Le 'run' est utilisé pour lancer des scripts et des commandes shell, comme par exemple 'npm i', Alors que le run_on est utilisé pour lancer le pipeline au tout début et définir à quel moment la pipeline se lance.
+```
+
+- Quelle est la différence entre “use” et “run”? Expliquez par rapport à votre pipeline.
+```bash
+La fonction 'use' permet de reprendre une fonction déjà créée par quelqu'un d'autre et reprise dans un de ses repositories. 'Run' exécute une commande shell ou un script directement dans L'intégration continue (workflow). 
+Ici, on utilise 'uses' pour récupérer les fichiers du répertoire action/checkout, et 'run' est utilisé pour exécuter nos lignes de code et nos scripts dans le contexte de cette pipeline.
+```
+
+- Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
+```bash
+Non, car chaque étape est nécessaire pour pouvoir lancer la suivante. Dans le meilleur des scénarios. les dépendances doivent être installées avant de vérifier et formater le code. Le code doit être testé avant d'être buildé. 
+Cependant, dans certains cas, certaines étapes peuvent être parallélisées, comme entre eslint et prettier.
+```
+
+- Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ?
+```bash
+Tout d'abord, il faut savoir s'il s'agit d'une dépendance ou si le programme est tiré d'un autre projet (GitHub).
+Si on le tire d'un autre projet, il faut utiliser 'uses' pour récupérer les informations et ensuite 'run'. 
+Si c'est une instance, il faudra le configurer, puis créer un script dans le package.json pour pouvoir l'exécuter avec une commande dans le fichier YAML.
 ```
