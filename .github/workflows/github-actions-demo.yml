@@ -12,7 +12,6 @@ jobs:
 
     - name : instal dependency
       run: npm i
-    - run: npm init @eslint/config
 
     - name : display Start time
       run: echo "Pipeline started at $(date)"
@@ -26,5 +25,10 @@ jobs:
     - name: build the code
       run : npm run build
 
+
+
     - name: Display End Time
       run: echo "Pipeline ended at $(date)"
+
+    - name: Display Success Message
+      run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
