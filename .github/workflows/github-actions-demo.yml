@@ -6,10 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+
     - name : instal dependency
       run: npm i
 
-    - name : display time of begining
+    - name : display Start time
       run: echo "Pipeline started at $(date)"
 
     - name : run lint and prittier to fix the code  
