@@ -44,8 +44,6 @@ Contributors names and contact info
 
 Groupe :
 
-
--   Dls
 ## mini projet-2
 
 # DevOps Mini-Projet 2
