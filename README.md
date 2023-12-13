@@ -53,19 +53,22 @@ Asipuela Karen,
 
 - Décrivez brièvement ce que fait votre fichier YML.  
 ```bash
-<votre réponse ici>
+Il installe les dépendances puis il lance plusieurs vérifications du code à la suite, test le code et finalement, le build.
+Si tout est vérifié, il renvoie 'la pipeline a réussi'.
 ```
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ?  Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ? 
 ```bash
-<votre réponse ici>
+Le 'on' sert de marqueur pour lancer la pipeline a différents endroits du code.
+Leur différence se trouve au niveau du lancement : 'on push' se lance lors d'un push alors que 'on pull request' se lance lorsqu'on lance une request.
+On conseillerait l'utilisation d'un 'on push' pour faire des vérifications plus frequemment qu'avec un 'on request'. Cela permettra de vérifier le code sur des sections "plus petites" et faciliter la détection d'erreurs.
 ```
 - Quelle est la différence entre run et run_on ?  Expliquez par rapport à votre pipeline.  
 ```bash
-<votre réponse ici>
+////////////////////
 ```
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline. 
 ```bash
-<votre réponse ici>
+
 ```
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline. 
 ```bash
