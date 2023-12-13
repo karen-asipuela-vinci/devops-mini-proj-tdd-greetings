@@ -1,4 +1,4 @@
-export class Main {
+class Main {
   greet (name) {
     if (name === null || name === undefined || name === ' ') {
       return 'Hello, my friend.';
@@ -124,3 +124,5 @@ export class Main {
     return 'Hello, ' + name + '.';
   }
 }
+
+module.exports = { Main };
