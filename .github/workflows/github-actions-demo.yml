@@ -21,11 +21,9 @@ jobs:
     - name : test the code with jest
       run: npm run test
 
-    - name: Generate
-      uses: skx/github-action-build@master
-      with:
-        builder: .github/build
-
+    - name: build code
+      run: npm run build
+     
     - name: Show End Time
       run: echo "Pipeline ended at $(date)"
 
