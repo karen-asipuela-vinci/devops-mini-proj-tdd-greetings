@@ -9,7 +9,9 @@
         "test:watch": "jest --watchAll",
         "lint": "eslint . --config .eslintrc.cjs",
         "lint:fix": "eslint --fix .",
-        "code:fix": "prettier --write . && eslint --fix ."
+        "code:fix": "prettier --write . && eslint --fix .",
+        "build": "webpack ./src/app.js -o public/"
+        
     },
     "type": "module",
     "author": "group 15",
